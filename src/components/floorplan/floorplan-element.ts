@@ -318,7 +318,6 @@ export class FloorplanElement extends LitElement {
     }
   }
 
-  /*
   async loadLibraries(): Promise<void> {
     if (this.isOptionEnabled(this.config.pan_zoom)) {
       await this.loadScript('/local/floorplan/lib/svg-pan-zoom.min.js', true);
@@ -328,7 +327,6 @@ export class FloorplanElement extends LitElement {
       await this.loadScript('/local/floorplan/lib/fully-kiosk.js', false);
     }
   }
-  */
 
   loadScript(scriptUrl: string, useCache: boolean): Promise<void> {
     if (!scriptUrl) return Promise.resolve();
@@ -608,9 +606,6 @@ export class FloorplanElement extends LitElement {
       this.floorplanElement.appendChild(svg);
     }
 
-    // TODO: Re-enable???
-    // Enable pan / zoom if enabled in config
-    /*
     if (this.isOptionEnabled(this.config.pan_zoom)) {
       svgPanZoom(svg, {
         zoomEnabled: true,
@@ -619,7 +614,6 @@ export class FloorplanElement extends LitElement {
         center: true,
       });
     }
-    */
 
     return svg;
   }
